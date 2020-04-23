@@ -8,19 +8,19 @@ pipeline {
         
     stage('Cloning Git') {
       steps {
-        git 'https://github.com/gustavoapolinario/node-todo-frontend'
+        git 'https://github.com/sukanya-11/node-todo-frontend.git'
       }
     }
         
     stage('Install dependencies') {
       steps {
-        sh 'npm install'
+        bat 'npm install'
       }
     }
      
     stage('Test') {
       steps {
-         sh 'npm test'
+         bat 'npm test'
       }
     }      
   }
